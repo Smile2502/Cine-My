@@ -4,12 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cine My</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1c1c1c;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #e50914;
+        }
+
+        nav {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .filme-destaque {
+            background-color: #2a2a2a;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #1c1c1c;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            color: #999999;
+        }
+    </style>
 </head>
+<link rel="icon" type="image/png" href="Logo.png">
 <body>
 
     <header>
-        <h1>Cine My</h1>
+        <h1>𝘾𝙞𝙣𝙚 𝙈𝙮</h1>
         <nav>
             <a href="#">Início</a>
             <a href="#">Filmes</a>
@@ -23,15 +76,6 @@
             <h2>Destaque: O Poder do Cinema</h2>
             <p>Um filme emocionante que mostra como a sétima arte pode transformar vidas. Não perca!</p>
         </section>
-
-        <section>
-            <h2>Últimos lançamentos</h2>
-            <ul>
-                <li>🔹 Como Treinar O Seu Dragão (2025)</li>
-                <li>🔹 Lilo & Stitch</li>
-                <li>🔹 Superman</li>
-            </ul>
-        </section>
     </main>
 
     <footer>
@@ -40,3 +84,141 @@
 
 </body>
 </html>
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cine My</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section class="catalogo">
+            <h2>Filmes em Destaque</h2>
+            <div class="grid-filmes">
+                
+                <!-- Filme 1 -->
+                <div class="card-filme">
+                <a href="quarteto.html">
+                    <span class="classificacao laranja">12</span>
+                    <img src="Quarteto Fantastico 4.png" alt="Quarteto Fantástico">
+                    <p>Quarteto Fantástico - Primeiros Passos</p>
+                </a>
+                </div>
+
+                <!-- Filme 2 -->
+                <div class="card-filme">
+                 <a href="superman.html">
+                    <span class="classificacao vermelha">14</span>
+                    <img src="Superman.png" alt="Superman">
+                    <p>Superman</p>
+                </a>
+            </div>
+
+                <!-- Filme 3 -->
+                <div class="card-filme">
+                    <a href="Smurf.html">
+                    <span class="classificacao verde">L</span>
+                    <img src="Smrfs.png" alt="Smurfs">
+                    <p>Smurfs</p>
+                    </a>
+                </div>
+
+                <!-- Adicione mais filmes aqui... -->
+
+</div>
+
+        </section>
+    </main>
+<style>
+body {
+    background-color: #0e1a21;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #141414;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    color: #e50914;
+}
+
+.catalogo {
+    padding: 20px;
+}
+
+.catalogo h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.grid-filmes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-filme {
+    position: relative;
+    width: 150px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card-filme:hover {
+    transform: scale(1.05);
+}
+
+.card-filme img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #333;
+}
+
+.card-filme p {
+    margin: 10px;
+    font-size: 0.9rem;
+}
+
+/* Classificações */
+.classificacao {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: #fff;
+    color: #000;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.laranja {
+    background-color: orange;
+    color: #000;
+}
+
+.verde {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.vermelha {
+    background-color: #e74c3c;
+    color: #fff;
+}
