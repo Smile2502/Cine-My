@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine My</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1c1c1c;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #e50914;
+        }
+
+        nav {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .filme-destaque {
+            background-color: #2a2a2a;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #1c1c1c;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            color: #999999;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cine My</h1>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Filmes</a>
+            <a href="#">Séries</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="filme-destaque">
+            <h2>Destaque: O Poder do Cinema</h2>
+            <p>Um filme emocionante que mostra como a sétima arte pode transformar vidas. Não perca!</p>
+        </section>
+
+        <section>
+            <h2>Últimos lançamentos</h2>
+            <ul>
+                <li>🔹 Missão Infinita</li>
+                <li>🔹 Além do Horizonte</li>
+                <li>🔹 O Enigma do Tempo</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Cine My - Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>
