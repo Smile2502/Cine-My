@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cine My</title>
+  <link rel="icon" type="image/png" href="Logo.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Flickity importado aqui -->
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+  <script src="slide.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>𝘾𝙞𝙣𝙚 𝙈𝙮</h1>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Filmes</a>
+            <a href="#">Séries</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+<section class="carrossel">
+  <h2 class="carrossel_título">Filmes em Destaque 🎬</h2>
+
+  <!-- Flickity HTML init -->
+  <div class="gallery js-flickity"
+       data-flickity-options='{ "wrapAround": true, "autoPlay": 3000, "imagesLoaded": true }'>
+    
+    <div class="gallery-cell">
+        <a href="Quarteto.html">
+      <img src="img/Quarteto.png" alt="Quarteto Fantástico">
+        </a>
+    </div>
+    <div class="gallery-cell">
+        <a href="superman.html">
+      <img src="img/Superman-2025.png" alt="Superman">
+      <div class="overlay">Superman</div>
+      </a>
+    </div>
+    <div class="gallery-cell">
+        <a href="Smurf.html">
+      <img src="img/Azul.png" alt="Smurfs">
+      </a>
+    </div>
+    
+  </div>
+</section>
+    
+    <main>
+
+       
+
+        <section class="catalogo">
+            <h2>Filmes
+            </h2>
+            <div class="grid-filmes">
+
+                <!-- Filme 1 -->
+                <div class="card-filme">
+                    <a href="quarteto.html">
+                        <span class="classificacao" data-cor="laranja">12</span>
+                        <img src="img/Quarteto4.png" alt="Quarteto Fantástico">
+                        <p>Quarteto Fantástico - Primeiros Passos</p>
+                    </a>
+                </div>
+
+                <!-- Filme 2 -->
+                <div class="card-filme">
+                    <a href="superman.html">
+                        <span class="classificacao" data-cor="vermelha">14</span>
+                        <img src="img/Superman.png" alt="Superman">
+                        <p>Superman</p>
+                    </a>
+                </div>
+
+                <!-- Filme 3 -->
+                <div class="card-filme">
+                    <a href="Smurf.html">
+                        <span class="classificacao" data-cor="verde">L</span>
+                        <img src="img/Smurfs.png" alt="Smurfs">
+                        <p>Smurfs</p>
+                    </a>
+                </div>
+
+                <!-- Adicione mais filmes aqui se quiser -->
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; 2025 Cine My - Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>
