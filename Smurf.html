@@ -5,16 +5,17 @@
     <title>Smurfs | Cine My</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<link rel="icon" type="image/png" href="Logo.png">
 <body class="pagina-filme">
 
     <div class="filme-detalhes">
         <div class="capa">
-            <img src="Smrfs.png" alt="Smurf">
+            <img src="img/Smurfs.png" alt="Smurf">
         </div>
         <div class="informacoes">
             <h1>Smurfs</h1>
             <div class="meta">
-                <span class="classificacao verde">L</span>
+                <span class="classificacao" data-cor="verde">L</span>
                 <span>1h35</span>
                 <span>Animação</span>
             </div>
@@ -50,77 +51,3 @@
 
 </body>
 </html>
-<style>.pagina-filme {
-    background-color: #0e1a21;
-    color: white;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-}
-
-.filme-detalhes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-.capa img {
-    width: 200px;
-    border-radius: 8px;
-}
-
-.informacoes {
-    flex: 1;
-}
-
-.meta {
-    margin: 10px 0;
-    display: flex;
-    gap: 10px;
-    font-size: 0.9rem;
-}
-
-.sinopse {
-    font-size: 1rem;
-    margin: 10px 0;
-    max-width: 600px;
-}
-
-.botoes-compartilhar button {
-    margin: 5px;
-    background-color: #1f80e0;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.sessoes {
-    margin-top: 40px;
-}
-
-.sessoes h2 {
-    margin-bottom: 10px;
-}
-
-.dias, .opcoes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.dias button,
-.opcoes button {
-    background-color: #1c1c1c;
-    color: white;
-    border: 1px solid #333;
-    padding: 10px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.dias button.ativo {
-    background-color: #1f80e0;
-}</style>
