@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cine My</title>
+  <link rel="icon" type="image/png" href="Logo.png">
+  <link rel="stylesheet" href="styles.css">
+  
+
+  <!-- Flickity importado aqui -->
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+  <script src="slide.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>𝘾𝙞𝙣𝙚 𝙈𝙮</h1>
+        <nav class="navegacao">
+            <a href="#">Início</a>
+            <a href="#">Filmes</a>
+            <a href="#">Séries</a>
+            <a href="#">Em breve</a>
+        </nav>
+    </header>
+
+
+<section class="carrossel">
+  <h2 class="carrossel_título"></h2>
+
+  <!-- Flickity HTML init -->
+  <div class="gallery js-flickity"
+       data-flickity-options='{ "wrapAround": true, "autoPlay": 3000, "imagesLoaded": true }'>
+    
+    <div class="gallery-cell">
+        <a href="Quarteto.html">
+      <img src="img/Quarteto.png" alt="Quarteto Fantástico">
+        </a>
+    </div>
+    <div class="gallery-cell">
+        <a href="superman.html">
+      <img src="img/Superman-2025.png" alt="Superman">
+      <div class="overlay">Superman</div>
+      </a>
+    </div>
+    <div class="gallery-cell">
+        <a href="Smurf.html">
+      <img src="img/Azul.png" alt="Smurfs">
+      </a>
+    </div>
+    
+  </div>
+</section>
+    
+    <main> 
+
+        <section class="catalogo">
+            <h2>Filmes
+            </h2>
+            <div class="grid-filmes">
+
+                <!-- Filme 1 -->
+                <div class="card-filme">
+                    <a href="quarteto.html">
+                        <span class="classificacao" data-cor="laranja">12</span>
+                        <img class="img-quarteto" src="img/Quarteto4.png" alt="Quarteto Fantástico">
+                        <h3 class="titulo-filme">Quarteto Fantástico: Primeiros Passos</h3>
+
+                    </a>
+                </div>
+
+                <!-- Filme 2 -->
+                <div class="card-filme">
+                    <a href="superman.html">
+                        <span class="classificacao" data-cor="vermelha">14</span>
+                        <img class="img-superma" src="img/Superman.png" alt="Superman">
+                        <h3 class="titulo-filme">Superman</h3>
+                    </a>
+                </div>
+
+                <!-- Filme 3 -->
+                <div class="card-filme">
+                    <a href="Smurf.html">
+                        <span class="classificacao" data-cor="verde">L</span>
+                        <img class="img-smurfs" src="img/Smurfs.png" alt="Smurfs">
+                        <h3 class="titulo-filme">Smurfs</h3>
+                    </a>
+                </div>
+                
+                <!-- Filme 4 -->
+                <div class="card-filme">
+                    <a href="filme-4.html">
+                        <span class="classificacao" data-cor="vermelha">L</span>
+                        <img class="img-superman" src="img/img-filme 4.png" alt="Pequenos Invasores">
+                        <h3 class="titulo-filme">Pequenos Invasores</h3>
+                    </a>
+                </div>
+
+                <!-- Filme 5 -->
+                <div class="card-filme">
+                    <a href="filme-5.html">
+                        <span class="classificacao" data-cor="verde">L</span>
+                        <img class="img-smurfs" src="img/img-filme 5.png" alt="Um Lobo Entre Os Cines">
+                        <h3 class="titulo-filme">Um Lobo Entre Os Cines</h3>
+                    </a>
+                </div>
+
+                <!-- Filme 6 -->
+                <div class="card-filme">   
+                    <a href="filme-6.html">
+                        <span class="classificacao" data-cor="laranja">10</span>
+                        <img class="img-quarteto" src="img/img-filme 6.png" alt="Uma Sexta-feira Mais Louca Ainda!">
+                        <h3 class="titulo-filme">Uma Sexta-feira Mais Louca Ainda!</h3>
+                    </a>
+                </div>
+
+                <!-- Filme 7 -->
+                <div class="card-filme">
+                    <a href="superman.html">
+                        <span class="classificacao" data-cor="vermelha">14</span>
+                        <img class="img-superma" src="img/img-filme 7.png" alt="A Melhor Mãe Do mundo">
+                        <h3 class="titulo-filme">A Melhor Mãe Do mundo</h3>
+                    </a>
+                </div>
+
+                <!-- Filme 8 -->
+                <div class="card-filme">
+                    <a href="Smurf.html">
+                        <span class="classificacao" data-cor="verde">L</span>
+                        <img class="img-smurfs" src="img/img-filme 8.png" alt="Amores Materialistas">
+                        <h3 class="titulo-filme">Amores Materialistas</h3>
+                    </a>
+                </div>
+
+                <!-- Filme 9 -->
+                <div class="card-filme">
+                    <a href="quarteto.html">
+                        <span class="classificacao" data-cor="laranja">12</span>
+                        <img class="img-quarteto" src="img/img-filme 9.png" alt="Quarteto Fantástico">
+                        <h3 class="titulo-filme">Drácula: Uma História De Amor Eterno</h3>
+                    </a>
+                </div>
+
+                <!-- Filme 10 -->
+                <div class="card-filme">
+                    <a href="superman.html">
+                        <span class="classificacao" data-cor="vermelha">14</span>
+                        <img class="img-superman" src="img/img-filme 10.png" alt="Como Treinar O Seu Dragão">
+                        <h3 class="titulo-filme">Como Treinar O Seu Dragão</h3>
+                    </a>    
+                </div>
+                
+
+                <!-- Adicione mais filmes aqui se quiser -->
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        &copy; 2025 Cine My - Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>
