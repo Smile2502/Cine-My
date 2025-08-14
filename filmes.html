@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Filmes</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Seu CSS -->
+</head>
+<body>
+    <!-- CABEÇALHO -->
+    <header>
+        <h1>Filmes</h1>
+        
+    </header>
+
+    <!-- LISTA DE FILMES -->
+    <main>
+        <section class="filmes">
+            <article class="filme" onclick="abrirFilme('Quarteto.html')">
+                <img src="img/Quarteto4.png" alt="Quarteto">
+                <h2>Título do Filme 1</h2>
+                <p>Breve descrição do filme 1. Conte algo que chame atenção do usuário.</p>
+            </article>
+
+            <article class="filme" onclick="abrirFilme('Smurf.html')">
+                <img src="img/Smurfs.png" alt="Smurfs">
+                <h2>Título do Filme 2</h2>
+                <p>Breve descrição do filme 2. Conte algo que chame atenção do usuário.</p>
+            </article>
+
+             <article class="filme" onclick="abrirFilme('Superman.html')">
+                <img src="img/Superman.png" alt="Superman">
+                <h2>Título do Filme 3</h2>
+                <p>Breve descrição do filme 3. Conte algo que chame atenção do usuário.</p>
+            </article>
+
+             <article class="filme" onclick="abrirFilme('dragão.html')">
+                <img src="img/Dragão.png" alt="Dragão">
+                <h2>Título do Filme 3</h2>
+                <p>Breve descrição do filme 3. Conte algo que chame atenção do usuário.</p>
+            </article>
+
+            </section>
+
+<script>
+function abrirFilme(url) {
+    window.location.href = url; // Redireciona para a página do filme
+}
+</script>
+
+
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>&copy; 2025 Meu Catálogo de Filmes</p>
+    </footer>
+</body>
+</html>
