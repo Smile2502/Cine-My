@@ -100,31 +100,111 @@ main {
   left: 8px;
   font-size: 0.8rem;
   font-weight: bold;
-  padding: 4px 8px;
-  border-radius: 4px;
+  padding: 6px 9px;
+  border-radius: 5px;
   width: 30px;
   text-align: center;
   line-height: 1.2;
   z-index: 1;
 }
+.classificacao[data-cor="azul"] {
+    background-color: #0095da;
+    color: #ffffff;
+}
 
-.classificacao[data-cor="laranja"] {
-    background-color: orange;
+.classificacao[data-cor="vermelha"] {
+    background-color: #ec1d25;
+    color: #ffffff;
+}
+
+.classificacao[data-cor="amarelo"] {
+    background-color: #fbc115;
     color: #ffffff;
 }
 .classificacao[data-cor="verde"] {
-    background-color: #2ecc71;
+    background-color: #00a651;
     color: #ffffff;
 }
-.classificacao[data-cor="vermelha"] {
-    background-color: #e74c3c;
+.classificacao[data-cor="laranja"] {
+    background-color: #f58220;
     color: #ffffff;
 }
-.classificacao[data-cor="verde"].destaque {
-    background-color: rgb(0, 255, 0);
-    font-size: 1.3rem;
-    padding: 4px 8px;
+
+
+/* CLASSIFICAÇÃO 2 */
+.classificacao1 {
+    position: center;
+    top: 8px;
+    left: 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 6px 9px;
+    border-radius: 4px;
+    background-color: #fbc115;
+    color: #ffffff;
 }
+
+.classificacao2 {
+    position: center;
+    top: 8px;
+    left: 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 6px 9px;
+    border-radius: 4px;
+    background-color: #f58220;
+    color: #ffffff;
+}
+.classificacao3 {
+    position: center;
+    top: 8px;
+    left: 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 6px 9px;
+    border-radius: 4px;
+    background-color: #00a651;
+    color: #ffffff;
+   
+}
+.classificacao4 {
+    position: center;
+    top: 8px;
+    left: 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 6px 9px;
+    border-radius: 4px;
+    background-color: #00a651;
+    color: #ffffff;
+}
+
+.classificacao5 {
+    position: center;
+    top: 8px;
+    left: 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 6px 9px;
+    border-radius: 4px;
+    background-color: #ec1d25;
+    color: #ffffff;
+}
+
+.classificacao6 {
+    position: center;
+    top: 8px;
+    left: 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 6px 9px;
+    border-radius: 4px;
+    background-color: #0095da;
+    color: #ffffff;
+}
+
+
+
 
 /* PÁGINA DE DETALHES DO FILME - Quarteto */
 .pagina-filme {
