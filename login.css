@@ -1,0 +1,88 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Fundo da página */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #000000, #da2d02);
+}
+
+/* Container do login */
+.login-container {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Título */
+.login-container h1 {
+  margin-bottom: 30px;
+  color: #333333;
+}
+
+/* Inputs */
+.login-container input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.login-container input:focus {
+  border-color: #2575fc;
+  outline: none;
+}
+
+/* Botão */
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #942e2e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #d81a1a;
+}
+
+/* Link de cadastro */
+.login-container .signup-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555555;
+}
+
+.login-container .signup-link a {
+  color: #2575fc;
+  text-decoration: none;
+}
+
+.login-container .signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+  .login-container {
+    padding: 30px 20px;
+  }
+}
