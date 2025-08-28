@@ -1,4 +1,4 @@
-/* RESET GERAL */
+/* ---RESET GERAL E BASE--- */
 * {
     box-sizing: border-box;
 }
@@ -12,23 +12,24 @@ body {
 }
 
 
-/* CABEÇALHO */
+/* CABEÇALHO E NAVEGAÇÂO */
 header {
     background-color: #1c1c1c;
     padding: 20px;
     text-align: center;
+    position: relative;
 }
 header h1 {
     margin: 0;
     color: #e50914;
 }
 
-/* NAVEGAÇÃO */
+/* --- NAVEGAÇÃO--- */
 nav {
     text-align: center;
     margin: 15px 0;
     a:hover {
-  color: #e50914; /* vermelho Netflix */
+  color: #e50914; 
 }
 
 
@@ -41,12 +42,68 @@ nav a {
     font-weight: bold;
 }
 
-/* CONTEÚDO PRINCIPAL */
+.icone-usuario {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    z-index: 10;
+}
+
+.icone-usuario img {
+    width: 100px;
+    height: 60px;
+    border-radius: 50%;
+    
+}
+
+.icone-usuario img:hover {
+    filter: drop-shadow(0 0 8px #e50914);
+    transform: scale(1.1);
+    transition: filter 0.1s, transform 0.1s;
+}
+
+.barra-pesquisa {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 20px;
+    position: absolute;
+    top: 46px;
+    left: 88%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.barra-pesquisa input[type="text"] {
+    padding: 7px 12px;
+    border-radius: 20px 0 0 20px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    width: 180px;
+}
+
+.barra-pesquisa button {
+    padding: 6px 10px;
+    border-radius: 0 20px 20px 0;
+    border: none;
+    background: #e50914;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barra-pesquisa button:hover {
+    background: #b0060f;
+}
+
+/* ---CONTEÚDO PRINCIPAL--- */
 main {
     padding: 20px;
 }
 
-/* FILME DESTAQUE */
+/* ---FILME DESTAQUE--- */
 .filme-destaque {
     background-color: #000000;
     padding: 15px;
@@ -54,7 +111,7 @@ main {
     border-radius: 10px;
 }
 
-/* CATÁLOGO DE FILMES */
+/* ---CATÁLOGO DE FILMES--- */
 .catalogo {
     padding: 20px;
 }
@@ -93,7 +150,7 @@ main {
     font-size: 0.9rem;
 }
 
-/* CLASSIFICAÇÃO */
+/* ---CLASSIFICAÇÃO--- */
 .classificacao {
   position: absolute;
   top: 8px;
@@ -131,8 +188,9 @@ main {
 }
 
 
-/* CLASSIFICAÇÃO 2 */
-.classificacao1 {
+/* CLASSIFICAÇÃO DOS FILMES */
+.classificacao1, .classificacao2, .classificacao3, .classificacao4,
+.classificacao5, .classificacao6, .classificacao7, .classificacao8, .classificacao9 {
     position: center;
     top: 8px;
     left: 8px;
@@ -140,104 +198,13 @@ main {
     font-weight: bold;
     padding: 6px 9px;
     border-radius: 4px;
-    background-color: #fbc115;
     color: #ffffff;
 }
-
-.classificacao2 {
-    position: center;
-    top: 8px;
-    left: 8px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    padding: 6px 9px;
-    border-radius: 4px;
-    background-color: #f58220;
-    color: #ffffff;
-}
-.classificacao3 {
-    position: center;
-    top: 8px;
-    left: 8px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    padding: 6px 9px;
-    border-radius: 4px;
-    background-color: #00a651;
-    color: #ffffff;
-   
-}
-.classificacao4 {
-    position: center;
-    top: 8px;
-    left: 8px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    padding: 6px 9px;
-    border-radius: 4px;
-    background-color: #00a651;
-    color: #ffffff;
-}
-
-.classificacao5 {
-    position: center;
-    top: 8px;
-    left: 8px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    padding: 6px 9px;
-    border-radius: 4px;
-    background-color: #ec1d25;
-    color: #ffffff;
-}
-
-.classificacao6 {
-    position: center;
-    top: 8px;
-    left: 8px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    padding: 6px 9px;
-    border-radius: 4px;
-    background-color: #0095da;
-    color: #ffffff;
-}
-
-.classificacao7 {
-    position: center;
-    top: 8px;
-    left: 8px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    padding: 6px 9px;
-    border-radius: 4px;
-    background-color: #f58220;
-    color: #ffffff;
-}
-
-.classificacao8 {
-    position: center;
-    top: 8px;
-    left: 8px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    padding: 6px 9px;
-    border-radius: 4px;
-    background-color: #f58220;
-    color: #ffffff;
-}
-
-.classificacao9 {
-    position: center;
-    top: 8px;
-    left: 8px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    padding: 6px 9px;
-    border-radius: 4px;
-    background-color: #ec1d25;
-    color: #ffffff;
-}
+.classificacao1 { background-color: #fbc115; }
+.classificacao2, .classificacao7, .classificacao8 { background-color: #f58220; }
+.classificacao3, .classificacao4 { background-color: #00a651; }
+.classificacao5, .classificacao9 { background-color: #ec1d25; }
+.classificacao6 { background-color: #0095da; }
 
 
 
@@ -379,10 +346,8 @@ footer {
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
     font-weight: 700;
-    color: #FFEB3B; /* amarelo mais vibrante */
-    text-shadow: 
-        0 0 5px rgba(255,235,59,0.8), /* glow amarelo */
-        0 0 10px rgba(0,0,0,0.6);     /* sombra escura suave */
+    color: #f3f3f3; /* amarelo mais vibrante */
+    
 }
 
 
@@ -471,7 +436,7 @@ footer {
 
 .sessao-cinema h3 {
   color: #fbc115;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   margin-bottom: 10px;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
 }
@@ -484,7 +449,7 @@ footer {
   display: inline-block;
   background-color: #333;
   color: #ffffff;
-  padding: 6px 12px;
+  padding: 8px 16px;
   border-radius: 6px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -534,27 +499,37 @@ footer {
   display: flex;
   align-items: center;
   background-color: #2a2a2a;
-  padding: 4px 8px;
+  padding: 8px 14px;
+  font-size: 1.1rem;
   border-radius: 6px;
   font-size: 0.8rem;
   color: #fbc115;
   font-weight: bold;
 }
 
-.icon-item img {
-  width: 18px;
-  height: 18px;
-  margin-right: 5px;
+.icon-item a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
 }
 
-/* Reduz tamanho do card */
+.icon-item img {
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+}
+
+/* Sessão de cinema */
 .sessao-cinema {
   background-color: #1c1c1c;
-  padding: 15px;
+  padding: 32px 32px;
   border-radius: 10px;
   margin-bottom: 20px;
   box-shadow: 0 0 8px rgba(0,0,0,0.4);
-  max-width: 600px;
+  max-width: 900px;
+  font-size: 1.15rem;
 
   /* efeito suave */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -562,13 +537,14 @@ footer {
 
 /* Efeito ao passar o mouse */
 .sessao-cinema:hover {
-  transform: translateY(-3px); /* sobe levemente */
-  box-shadow: 0 12px 25px rgba(0,0,0,0.5); /* sombra mais forte */
+  transform: translateY(-1px); /* sobe levemente */
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3); /* sombra mais forte */
+  margin-top: 20px; /* mantém o espaçamento */
 }
 
 /* Título do cinema */
 .cabecalho-cinema h3 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #fbc115;
   margin: 0;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
@@ -579,7 +555,8 @@ footer {
   background: linear-gradient(45deg, #e50914, #ff4b4b);
   color: white;
   border: none;
-  padding: 10px 16px;
+  padding: 14px 28px;
+  font-size: 1.1rem;
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;

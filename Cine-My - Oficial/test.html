@@ -1,294 +1,117 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Seleção de Assentos</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #121212;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .container {
-      display: flex;
-      gap: 30px;
-      max-width: 1200px;
-      width: 100%;
-    }
-
-    .mapa-assentos {
-      flex: 2;
-    }
-
-    .resumo {
-      flex: 1;
-      background: #1c1c1c;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    }
-
-    .resumo h3 {
-      margin-bottom: 10px;
-      font-size: 20px;
-      border-bottom: 1px solid #444;
-      padding-bottom: 5px;
-    }
-
-    .resumo p {
-      margin: 8px 0;
-    }
-
-    .resumo ul {
-      list-style: none;
-      padding: 0;
-      margin: 10px 0;
-    }
-
-    .resumo ul li {
-      padding: 6px 0;
-      border-bottom: 1px solid #333;
-    }
-
-    .resumo .total {
-    font-size: 20px;
-    color: #00ff88;
-    font-weight: bold;
-    margin-top: 15px;
-    
-}
-
-
-    .resumo button {
-  margin-top: 20px;
-  background: #00ff88;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 6px;
-  font-weight: bold;
-  color: #000;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.resumo button:hover {
-  background: #00cc6a;
-}
-
-    .cabecalho {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .cabecalho h2 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    .cabecalho p {
-      margin: 5px 0;
-      font-size: 16px;
-      color: #ccc;
-    }
-
-    .legenda {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-bottom: 20px;
-    }
-
-    .legenda div {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 14px;
-    }
-
-    .assentos {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 8px;
-      justify-items: center;
-    }
-
-    .assento {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: #6c73ff;
-      cursor: pointer;
-      transition: transform 0.2s ease, background 0.3s ease;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 0.7rem;
-      color: white;
-    }
-
-    .assento:hover {
-      transform: scale(1.1);
-    }
-
-    .assento.ocupado {
-      background: #555;
-      cursor: not-allowed;
-    }
-
-    .assento.selecionado {
-      background: #00ff88;
-      color: #000;
-      font-weight: bold;
-    }
-
-    .resumo-info h1.titulo-filme {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: #fbc115;
-    }
-
-    
-      .resumo-conteudo {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-   animation: fadeIn 0.6s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-  .resumo-imagem img {
-  width: 100px;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
-  border: 1px solid #333;
-}
-
-
-@media (max-width: 768px) {
-  .container {
+<style>
+  #mapaAssentos {
+    display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 5px;
   }
-
-  .resumo-conteudo {
-    flex-direction: column;
+  .fileira {
+    display: flex;
     align-items: center;
-    text-align: center;
+    gap: 5px;
   }
-
-  .resumo-imagem img {
-    width: 120px;
+  .numero-fileira {
+    width: 30px;
+    text-align: right;
+    font-weight: bold;
   }
-
-  .resumo-info {
-    width: 100%;
-  }
-
-  .assentos {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
   .assento {
-    width: 28px;
-    height: 28px;
-    font-size: 0.6rem;
+    width: 30px;
+    height: 30px;
+    background-color: #00aaff;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
   }
-}
+  .assento.ocupado {
+    background-color: #999;
+    cursor: not-allowed;
+  }
+  .assento.selecionado {
+    background-color: #4CAF50;
+  }
+</style>
 
-  </style>
-</head>
-<body>
+<div id="mapaAssentos"></div>
+<ul id="listaAssentos"></ul>
+<p>Total: <span id="valorTotal"></span></p>
 
-  <div class="cabecalho">
-    <h2>Quarteto Fantastico</h2>
-    <p>Sala 1 - UUSER | 20:40</p>
-  </div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const mapa = document.getElementById('mapaAssentos');
+  const listaAssentos = document.getElementById('listaAssentos');
+  const valorTotal = document.getElementById('valorTotal');
+  const precoPorAssento = 10.00;
 
-  <div class="container">
-    <div class="mapa-assentos">
-      <div class="legenda">
-        <div><span class="assento"></span> Disponível</div>
-        <div><span class="assento ocupado"></span> Ocupado</div>
-        <div><span class="assento selecionado"></span> Selecionado</div>
-      </div>
+  const assentosPorFileira = 12;
+  const totalAssentos = 96;
+  const totalFileiras = Math.ceil(totalAssentos / assentosPorFileira);
 
-      <div class="assentos" id="mapaAssentos">
-        <!-- Assentos gerados via JS -->
-      </div>
-    </div>
+  let contador = 1;
 
-    <div class="resumo resumo-pedido">
-      <h3>Resumo do Pedido</h3>
+  for (let f = 1; f <= totalFileiras; f++) {
+    const fileira = document.createElement('div');
+    fileira.classList.add('fileira');
 
-      <div class="resumo-conteudo">
-        <div class="resumo-imagem">
-          <img src="img/Quarteto-atualizado.png" alt="Quarteto Fantastico 4" class="img-resumo" width="100%">
-        </div>
+    const label = document.createElement('div');
+    label.classList.add('numero-fileira');
+    label.textContent = f;
+    fileira.appendChild(label);
 
-        <div class="resumo-info">
-          <h1 class="titulo-filme">Quarteto Fantastico 4</h1>
-          <p><strong>Filme:</strong> Quarteto Fantastico</p>
-          <p><strong>Sala:</strong> 1</p>
-          <p><strong>Horário:</strong> 20:40</p>
-          <ul id="listaAssentos"></ul>
-          <p class="total">Total: <strong id="valorTotal">R$ 0,00</strong></p>
-          <button class="btn-finalizar">Finalizar Compra</button>
-        </div>
-      </div>
-    </div>
-  </div>
+    for (let a = 1; a <= assentosPorFileira; a++) {
+      if (contador > totalAssentos) break;
 
-  <script>
-    const mapa = document.getElementById('mapaAssentos');
-    const listaAssentos = document.getElementById('listaAssentos');
-    const valorTotal = document.getElementById('valorTotal');
-    const precoPorAssento = 10.00;
-
-    for (let i = 1; i <= 96; i++) {
       const div = document.createElement('div');
       div.classList.add('assento');
-      div.dataset.num = `G${i}`;
-      div.textContent = i;
-      if (i % 13 === 0 || i % 17 === 0) div.classList.add('ocupado');
-      mapa.appendChild(div);
+      div.dataset.num = `F${f}-A${a}`;
+      div.textContent = contador;
+
+      if (contador % 13 === 0 || contador % 17 === 0) {
+        div.classList.add('ocupado');
+      }
+
+      fileira.appendChild(div);
+      contador++;
     }
 
-    mapa.addEventListener('click', e => {
-      const alvo = e.target;
-      if (alvo.classList.contains('assento') && !alvo.classList.contains('ocupado')) {
-        alvo.classList.toggle('selecionado');
-        atualizarResumo();
-      }
+    mapa.appendChild(fileira);
+  }
+
+  listaAssentos.innerHTML = '<li class="vazio">Nenhum assento selecionado</li>';
+  valorTotal.textContent = 'R$ 0,00';
+
+  mapa.addEventListener('click', e => {
+    const alvo = e.target;
+    if (alvo.classList.contains('assento') && !alvo.classList.contains('ocupado')) {
+      alvo.classList.toggle('selecionado');
+      atualizarResumo();
+    }
+  });
+
+  function atualizarResumo() {
+    const selecionados = document.querySelectorAll('.assento.selecionado');
+    listaAssentos.innerHTML = '';
+    let total = 0;
+
+    if (selecionados.length === 0) {
+      const vazio = document.createElement('li');
+      vazio.classList.add('vazio');
+      vazio.textContent = 'Nenhum assento selecionado';
+      listaAssentos.appendChild(vazio);
+      valorTotal.textContent = 'R$ 0,00';
+      return;
+    }
+
+    selecionados.forEach(assento => {
+      const num = assento.dataset.num;
+      const item = document.createElement('li');
+      item.textContent = `Assento ${num} - R$ ${precoPorAssento.toFixed(2)}`;
+      listaAssentos.appendChild(item);
+      total += precoPorAssento;
     });
 
-    function atualizarResumo() {
-      const selecionados = document.querySelectorAll('.assento.selecionado');
-      listaAssentos.innerHTML = '';
-      let total = 0;
-
-      selecionados.forEach(assento => {
-        const num = assento.dataset.num;
-        const item = document.createElement('li');
-        item.textContent = `Assento ${num} - R$ ${precoPorAssento.toFixed(2)}`;
-        listaAssentos.appendChild(item);
-        total += precoPorAssento;
-      });
-
-      valorTotal.textContent = `R$ ${total.toFixed(2)}`;
-    }
-  </script>
-
-</body>
-</html>
+    valorTotal.textContent = `R$ ${total.toFixed(2)}`;
+  }
+});
+</script>
